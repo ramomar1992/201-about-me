@@ -44,6 +44,10 @@ article {
     box-shadow: 20px 20px 30px grey;
 }
 
+article:hover {
+    width: 82%;
+}
+
 article h2 {
     font-size: 3rem;
     text-align: justify;
