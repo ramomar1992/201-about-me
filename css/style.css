@@ -66,14 +66,23 @@ article p {
 
 }
 
-article ul {
-    padding: 2rem;
-    font-size: 2rem;
+ol {
     list-style-type: georgian;
 }
 
+ul {
+    list-style-type: square;
+}
 
-article ul li {
+article ul,
+article ol {
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+
+article ul li,
+article ol li {
 
     margin: 2rem;
     font-weight: 600;
@@ -81,7 +90,8 @@ article ul li {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-article ul li:hover {
+article ul li:hover,
+article ol li:hover {
     color: orange;
     text-shadow: -1px 0 black,
         0 1px black,
