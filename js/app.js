@@ -41,7 +41,7 @@ while (cond === true) {
 
 // console.log(answer1);
 alert('Your input was ' + answer1);
-alert('You score now is ' + score + ' out of 7');
+alert('Your score now is ' + score + ' out of 7');
 let answer2 = '';
 cond = true;
 while (cond === true) {
@@ -65,7 +65,7 @@ while (cond === true) {
 }
 // console.log(answer2);
 alert('Your input was ' + answer2);
-alert('You score now is ' + score + ' out of 7');
+alert('Your score now is ' + score + ' out of 7');
 let answer3 = '';
 cond = true;
 while (cond === true) {
@@ -89,7 +89,7 @@ while (cond === true) {
 }
 // console.log(answer3);
 alert('Your input was ' + answer3);
-alert('You score now is ' + score + ' out of 7');
+alert('Your score now is ' + score + ' out of 7');
 let answer4 = '';
 cond = true;
 while (cond === true) {
@@ -113,7 +113,7 @@ while (cond === true) {
 }
 // console.log(answer4);
 alert('Your input was ' + answer4);
-alert('You score now is ' + score + ' out of 7');
+alert('Your score now is ' + score + ' out of 7');
 let answer5 = '';
 cond = true;
 while (cond === true) {
@@ -137,7 +137,7 @@ while (cond === true) {
 }
 // console.log(answer5);
 alert('Your input was ' + answer5);
-alert('You score now is ' + score + ' out of 7');
+alert('Your score now is ' + score + ' out of 7');
 let computerGuess = Math.floor(Math.random()*Math.floor(10));
 // console.log(computerGuess);
 alert('Now, before you go. Let\'s play a Guessing Game. I will have a number and you will guess what it is.');
@@ -182,8 +182,8 @@ for (let i = 0; i < 4; i++) {
   }
 
 }
-alert('You score now is ' + score + ' out of 7');
-alert('Now, we are going to play another guessing name with multiple correct answers.However, do not worry you only need to guess one right answer');
+alert('Your score now is ' + score + ' out of 7');
+alert('Now, we are going to play another guessing game with multiple correct answers.However, do not worry you only need to guess one right answer');
 let sultans = ['salem', 'murad', 'ahmad', 'mustafa', 'osman', 'ebrahim', 'sulaiman'];
 let i = 0;
 do {
@@ -211,7 +211,7 @@ do {
     i++;
   }
 }while(i < 6);
-alert('You score now is ' + score + ' out of 7');
+alert('Your score now is ' + score + ' out of 7');
 if (score > 3) {
   alert('WeeeHaa!!! Hi five We are so alike with mind and way of life. Much respect mate');
 } else {
