@@ -1,12 +1,11 @@
 'use strict';
-
-////////////////////////////////
+let score = 0;
+///////////////////////////////
 function greatingUser() {
   alert('Hello,there! \n My name is Omar and this is my page.\nLet\'s play a guessing game. I will ask you some' +
     ' questions and you are going to answer with only( yes or no) you can use. (y or n)\nLets first know your name.');
-  let userName = '';
   let condition = true;
-  let score = 0;
+  let userName = '';
   while (condition === true) {
     userName = prompt('What is your name?');
     if (userName !== '') {
@@ -17,85 +16,96 @@ function greatingUser() {
     }
 
   }
+
   // console.log('The user input is ' + userName);
   alert('You are welcome to my page ' + userName);
   return userName;
 }
-let answer1 = '';
-let cond = true;
-while (cond === true) {
-  answer1 = prompt('Do you like swimming?');
-  switch (answer1.toLowerCase()) {
-    case 'y':
-    case 'yes':
-      alert('Yeeeah, I love swimming too lovely ' + userName);
-      score++;
-      cond = false;
-      break;
-    case 'n':
-    case 'no':
-      alert('Oh, no. You need to love sports and exercising dude haha');
-      cond = false;
-      break;
-    default:
-      alert('Please answer with yes or no.');
-      break;
+function questionOne(userName) {
+
+  let answer1 = '';
+  let cond = true;
+  while (cond === true) {
+    answer1 = prompt('Do you like swimming?');
+    switch (answer1.toLowerCase()) {
+      case 'y':
+      case 'yes':
+        alert('Yeeeah, I love swimming too lovely ' + userName);
+        score++;
+        cond = false;
+        break;
+      case 'n':
+      case 'no':
+        alert('Oh, no. You need to love sports and exercising dude haha');
+        cond = false;
+        break;
+      default:
+        alert('Please answer with yes or no.');
+        break;
+    }
+
   }
 
-}
 
-
-// console.log(answer1);
-alert('Your input was ' + answer1);
-alert('Your score now is ' + score + ' out of 7');
-let answer2 = '';
-cond = true;
-while (cond === true) {
-  answer2 = prompt('Is computers appeal to you?');
-  switch (answer2.toLowerCase()) {
-    case 'y':
-    case 'yes':
-      alert('Then you should be a technology person, my respect ' + userName);
-      score++;
-      cond = false;
-      break;
-    case 'n':
-    case 'no':
-      alert('Oh, why not. Technology is the best these days for your information.');
-      cond = false;
-      break;
-    default:
-      alert('Please answer with yes or no.');
-      break;
-  }
+  // console.log(answer1);
+  alert('Your input was ' + answer1);
+  alert('Your score now is ' + score + ' out of 7');
+  return score
 }
-// console.log(answer2);
-alert('Your input was ' + answer2);
-alert('Your score now is ' + score + ' out of 7');
-let answer3 = '';
-cond = true;
-while (cond === true) {
-  answer3 = prompt('Do you love celebreties?');
-  switch (answer3.toLowerCase()) {
-    case 'y':
-    case 'yes':
-      alert('I think you should look for something more valuable to care for and like.');
-      cond = false;
-      break;
-    case 'n':
-    case 'no':
-      alert('I think this is the least thing to care about as well hahah. Hi five ' + userName);
-      score++;
-      cond = false;
-      break;
-    default:
-      alert('Please answer with yes or no.');
-      break;
+function questionTwo(userName) {
+  let answer2 = '';
+  cond = true;
+  while (cond === true) {
+    answer2 = prompt('Is computers appeal to you?');
+    switch (answer2.toLowerCase()) {
+      case 'y':
+      case 'yes':
+        alert('Then you should be a technology person, my respect ' + userName);
+        score++;
+        cond = false;
+        break;
+      case 'n':
+      case 'no':
+        alert('Oh, why not. Technology is the best these days for your information.');
+        cond = false;
+        break;
+      default:
+        alert('Please answer with yes or no.');
+        break;
+    }
   }
+  // console.log(answer2);
+  alert('Your input was ' + answer2);
+  alert('Your score now is ' + score + ' out of 7');
+  return score
 }
-// console.log(answer3);
-alert('Your input was ' + answer3);
-alert('Your score now is ' + score + ' out of 7');
+function questionThree(userName) {
+  let answer3 = '';
+  cond = true;
+  while (cond === true) {
+    answer3 = prompt('Do you love celebreties?');
+    switch (answer3.toLowerCase()) {
+      case 'y':
+      case 'yes':
+        alert('I think you should look for something more valuable to care for and like.');
+        cond = false;
+        break;
+      case 'n':
+      case 'no':
+        alert('I think this is the least thing to care about as well hahah. Hi five ' + userName);
+        score++;
+        cond = false;
+        break;
+      default:
+        alert('Please answer with yes or no.');
+        break;
+    }
+  }
+  // console.log(answer3);
+  alert('Your input was ' + answer3);
+  alert('Your score now is ' + score + ' out of 7');
+  return score
+}
 let answer4 = '';
 cond = true;
 while (cond === true) {
