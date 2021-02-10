@@ -106,30 +106,34 @@ function questionThree(userName) {
   alert('Your score now is ' + score + ' out of 7');
   return score
 }
-let answer4 = '';
-cond = true;
-while (cond === true) {
-  answer4 = prompt('Do you have pits?');
-  switch (answer4.toLowerCase()) {
-    case 'y':
-    case 'yes':
-      alert('OK, but don\'t forget to vaccine them on time ' + userName);
-      cond = false;
-      break;
-    case 'n':
-    case 'no':
-      score++;
-      alert('I can understand that. Animals are harmful sometimes!');
-      cond = false;
-      break;
-    default:
-      alert('Please answer with yes or no.');
-      break;
+function questionFour(userName) {
+  let answer4 = '';
+  cond = true;
+  while (cond === true) {
+    answer4 = prompt('Do you have pits?');
+    switch (answer4.toLowerCase()) {
+      case 'y':
+      case 'yes':
+        alert('OK, but don\'t forget to vaccine them on time ' + userName);
+        cond = false;
+        break;
+      case 'n':
+      case 'no':
+        score++;
+        alert('I can understand that. Animals are harmful sometimes!');
+        cond = false;
+        break;
+      default:
+        alert('Please answer with yes or no.');
+        break;
+    }
   }
+  // console.log(answer4);
+  alert('Your input was ' + answer4);
+  alert('Your score now is ' + score + ' out of 7');
+  return score
 }
-// console.log(answer4);
-alert('Your input was ' + answer4);
-alert('Your score now is ' + score + ' out of 7');
+
 let answer5 = '';
 cond = true;
 while (cond === true) {
