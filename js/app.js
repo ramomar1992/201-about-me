@@ -1,5 +1,7 @@
 'use strict';
+let cond = true;
 let score = 0;
+let userGuess = '';
 ///////////////////////////////
 function greatingUser() {
   alert('Hello,there! \n My name is Omar and this is my page.\nLet\'s play a guessing game. I will ask you some' +
@@ -24,7 +26,7 @@ function greatingUser() {
 function questionOne(userName) {
 
   let answer1 = '';
-  let cond = true;
+
   while (cond === true) {
     answer1 = prompt('Do you like swimming?');
     switch (answer1.toLowerCase()) {
@@ -50,7 +52,7 @@ function questionOne(userName) {
   // console.log(answer1);
   alert('Your input was ' + answer1);
   alert('Your score now is ' + score + ' out of 7');
-  return score
+  return score;
 }
 function questionTwo(userName) {
   let answer2 = '';
@@ -77,7 +79,7 @@ function questionTwo(userName) {
   // console.log(answer2);
   alert('Your input was ' + answer2);
   alert('Your score now is ' + score + ' out of 7');
-  return score
+  return score;
 }
 function questionThree(userName) {
   let answer3 = '';
@@ -104,7 +106,7 @@ function questionThree(userName) {
   // console.log(answer3);
   alert('Your input was ' + answer3);
   alert('Your score now is ' + score + ' out of 7');
-  return score
+  return score;
 }
 function questionFour(userName) {
   let answer4 = '';
@@ -131,7 +133,7 @@ function questionFour(userName) {
   // console.log(answer4);
   alert('Your input was ' + answer4);
   alert('Your score now is ' + score + ' out of 7');
-  return score
+  return score;
 }
 function questionFive(userName) {
   let answer5 = '';
@@ -158,13 +160,13 @@ function questionFive(userName) {
   // console.log(answer5);
   alert('Your input was ' + answer5);
   alert('Your score now is ' + score + ' out of 7');
-  return score
+  return score;
 }
-function questionSix(userName) {
+function questionSix() {
   let computerGuess = Math.floor(Math.random() * Math.floor(10));
   // console.log(computerGuess);
   alert('Now, before you go. Let\'s play a Guessing Game. I will have a number and you will guess what it is.');
-  let userGuess = '';
+
   let listNum = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   // console.log(computerGuess);
   for (let i = 0; i < 4; i++) {
@@ -207,36 +209,48 @@ function questionSix(userName) {
   }
   alert('Your score now is ' + score + ' out of 7');
   alert('Now, we are going to play another guessing game with multiple correct answers.However, do not worry you only need to guess one right answer');
-  return score
+  return score;
 }
-let sultans = ['salem', 'murad', 'ahmad', 'mustafa', 'osman', 'ebrahim', 'sulaiman'];
-let i = 0;
-do {
-  userGuess = prompt('Give me a name of one of the ottoman empire sultans during the period (1550 - 1700)?');
-  console.log(sultans.indexOf(userGuess.toLowerCase()));
-  if (!isNaN(userGuess) || userGuess === '') {
-    userGuess = alert('Please enter a valid name');
-    continue;
-  } else if (sultans.indexOf(userGuess.toLowerCase()) !== -1 && i === 0) {
-    alert('congratulations you guessed it from the first time! ');
-    score++;
-    break;
-  } else if (sultans.indexOf(userGuess.toLowerCase()) !== -1) {
-    alert('congratulations you guessed it with ' + (i + 1) + ' attempts');
-    score++;
-    break;
-  } else if (i < 4) {
-    alert('Wrong answer,you still have ' + (5 - i) + ' attemtps. Try again now...');
-    i++;
-  } else if (i === 4) {
-    alert('Wrong again. Your last try ...');
-    i++;
-  } else {
-    alert('You lost');
-    i++;
-  }
-} while (i < 6);
-alert('Your score now is ' + score + ' out of 7');
+function questionSeven() {
+  let sultans = ['salem', 'murad', 'ahmad', 'mustafa', 'osman', 'ebrahim', 'sulaiman'];
+  let i = 0;
+  do {
+    userGuess = prompt('Give me a name of one of the ottoman empire sultans during the period (1550 - 1700)?');
+    console.log(sultans.indexOf(userGuess.toLowerCase()));
+    if (!isNaN(userGuess) || userGuess === '') {
+      userGuess = alert('Please enter a valid name');
+      continue;
+    } else if (sultans.indexOf(userGuess.toLowerCase()) !== -1 && i === 0) {
+      alert('congratulations you guessed it from the first time! ');
+      score++;
+      break;
+    } else if (sultans.indexOf(userGuess.toLowerCase()) !== -1) {
+      alert('congratulations you guessed it with ' + (i + 1) + ' attempts');
+      score++;
+      break;
+    } else if (i < 4) {
+      alert('Wrong answer,you still have ' + (5 - i) + ' attemtps. Try again now...');
+      i++;
+    } else if (i === 4) {
+      alert('Wrong again. Your last try ...');
+      i++;
+    } else {
+      alert('You lost');
+      alert('The right answers are  ' + sultans);
+      i++;
+    }
+  } while (i < 6);
+  alert('Your score now is ' + score + ' out of 7');
+  return score;
+}
+let userName = greatingUser();
+questionOne(userName);
+questionTwo(userName);
+questionThree(userName);
+questionFour(userName);
+questionFive(userName);
+questionSix();
+questionSeven();
 if (score > 3) {
   alert('WeeeHaa!!! Hi five We are so alike with mind and way of life. Much respect mate');
 } else {
