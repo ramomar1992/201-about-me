@@ -24,6 +24,10 @@ hgroup h2 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+main {
+    margin-bottom: 20rem;
+}
+
 hr {
     width: 10%;
     border: 1rem dotted rgba(173, 216, 230, 0.664);
@@ -49,6 +53,8 @@ article:hover {
 }
 
 article h2 {
+    position: sticky;
+    top: 20px;
     font-size: 3rem;
     text-align: justify;
     margin-left: 2rem;
@@ -98,4 +104,19 @@ article ol li:hover {
         1px 0 black,
         0 -1px black;
 
+}
+
+footer {
+    background-color: rgba(95, 158, 160, 0.76);
+    height: 8rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 3rem;
+    /* padding-left: 50%; */
+    margin-left: 20rem;
+    margin-top: 3rem;
 }
